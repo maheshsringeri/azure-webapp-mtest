@@ -5,6 +5,12 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>azure_webapp_mtest</RootNamespace>
+    <ApplicationInsightsResourceId>/subscriptions/4b5711e8-794f-4dfa-ae80-49704adfc163/resourceGroups/AzureLearning/providers/microsoft.insights/components/az-webapp-mtest2</ApplicationInsightsResourceId>
+    <UserSecretsId>2350ff56-a9c3-4ad2-9db1-980caf6f7a13</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.15.0" />
+  </ItemGroup>
 
 </Project>
