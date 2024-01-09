@@ -1,6 +1,12 @@
+using azure_webapp_mtest.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddApplicationInsightsTelemetry();
+
+builder.Services.AddDbContext<AppDBContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("AzureSqlConnection")));
 
 // Add services to the container.
 builder.Services.AddRazorPages();
